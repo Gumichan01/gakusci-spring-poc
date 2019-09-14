@@ -15,7 +15,6 @@ class ArxivRestTemplate {
     fun search(query: String): List<ArxivResultEntry> {
         val url = arxivUrl.format(query)
         val jsonResponse = restTemplate.getForObject<String>(url)
-        val resultEntries: List<ArxivResultEntry> = ObjectMapper().readValue(jsonResponse, object : TypeReference<List<ArxivResultEntry>>() {})
-        return resultEntries
+        return ObjectMapper().readValue(jsonResponse, object : TypeReference<List<ArxivResultEntry>>() {})
     }
 }
