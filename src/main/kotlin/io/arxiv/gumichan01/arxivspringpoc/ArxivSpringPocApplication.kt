@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class ArxivSpringPocApplication
 
 fun main(args: Array<String>) {
-	runApplication<ArxivSpringPocApplication>(*args)
+    runApplication<ArxivSpringPocApplication>(*args)
 }
