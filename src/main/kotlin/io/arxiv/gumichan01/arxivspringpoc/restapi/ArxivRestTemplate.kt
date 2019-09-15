@@ -9,12 +9,13 @@ import org.springframework.web.client.getForObject
 @Component
 class ArxivRestTemplate {
 
-    val arxivUrl = "https://api.archives-ouvertes.fr/search/?q=%s&wt=json"
-    val restTemplate: RestTemplate = RestTemplate()
+    private val arxivUrl = "https://api.archives-ouvertes.fr/search/?q=%s&wt=json"
+    private val restTemplate: RestTemplate = RestTemplate()
 
     fun search(query: String): List<ArxivResultEntry> {
         val url = arxivUrl.format(query)
         val jsonResponse = restTemplate.getForObject<String>(url)
-        return ObjectMapper().readValue(jsonResponse, object : TypeReference<List<ArxivResultEntry>>() {})
+        val arxivResult: ArxivResult = ObjectMapper().readValue(jsonResponse, object : TypeReference<ArxivResult>() {})
+        return arxivResult.docs
     }
 }
