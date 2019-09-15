@@ -1,7 +1,7 @@
 package io.arxiv.gumichan01.arxivspringpoc.restapi
 
 import com.fasterxml.jackson.core.type.TypeReference
-import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import org.springframework.stereotype.Component
 import org.springframework.web.client.RestTemplate
 import org.springframework.web.client.getForObject
@@ -15,7 +15,8 @@ class ArxivRestTemplate {
     fun search(query: String): List<ArxivResultEntry> {
         val url = arxivUrl.format(query)
         val jsonResponse = restTemplate.getForObject<String>(url)
-        val arxivResult: ArxivResult = ObjectMapper().readValue(jsonResponse, object : TypeReference<ArxivResult>() {})
-        return arxivResult.docs
+        val mapper = jacksonObjectMapper()
+        val arxivResult: ArxivResponse = mapper.readValue(jsonResponse, object : TypeReference<ArxivResponse>() {})
+        return arxivResult.response.docs ?: listOf()
     }
 }
