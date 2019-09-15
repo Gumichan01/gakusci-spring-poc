@@ -1,11 +1,11 @@
-package io.arxiv.gumichan01.arxivspringpoc.restapi
+package io.hal.gumichan01.springpoc.restapi
 
 import org.springframework.stereotype.Component
 import org.springframework.web.client.RestTemplate
 import org.springframework.web.client.getForObject
 
 @Component
-class ArxivRestTemplate {
+class HalRestTemplate {
 
     private val arxivUrl = "https://api.archives-ouvertes.fr/search/?q=%s&wt=json"
     private val restTemplate: RestTemplate = RestTemplate()

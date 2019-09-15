@@ -1,4 +1,4 @@
-package io.arxiv.gumichan01.arxivspringpoc
+package io.hal.gumichan01.springpoc
 
 import org.junit.Test
 import org.junit.runner.RunWith

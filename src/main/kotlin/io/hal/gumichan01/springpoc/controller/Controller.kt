@@ -1,13 +1,13 @@
-package io.arxiv.gumichan01.arxivspringpoc.controller
+package io.hal.gumichan01.springpoc.controller
 
-import io.arxiv.gumichan01.arxivspringpoc.domain.model.DocumentEntry
-import io.arxiv.gumichan01.arxivspringpoc.domain.service.ArxivService
+import io.hal.gumichan01.springpoc.domain.model.DocumentEntry
+import io.hal.gumichan01.springpoc.domain.service.Service
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class ArxivController(val arxivService: ArxivService) {
+class Controller(val service: Service) {
 
     @GetMapping("/")
     fun home(): String {
@@ -16,6 +16,6 @@ class ArxivController(val arxivService: ArxivService) {
 
     @GetMapping("/search/")
     fun search(@RequestParam(value = "q", required = true) query: String): List<DocumentEntry> {
-        return arxivService.searchForResourceName(query)
+        return service.searchForResourceName(query)
     }
 }

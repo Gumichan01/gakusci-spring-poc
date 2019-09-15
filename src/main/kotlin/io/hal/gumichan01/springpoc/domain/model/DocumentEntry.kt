@@ -1,3 +1,3 @@
-package io.arxiv.gumichan01.arxivspringpoc.domain.model
+package io.hal.gumichan01.springpoc.domain.model
 
 data class DocumentEntry(val label: String, val url: String)
