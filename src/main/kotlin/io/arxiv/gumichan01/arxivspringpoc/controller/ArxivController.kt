@@ -1,5 +1,6 @@
 package io.arxiv.gumichan01.arxivspringpoc.controller
 
+import io.arxiv.gumichan01.arxivspringpoc.domain.model.DocumentEntry
 import io.arxiv.gumichan01.arxivspringpoc.domain.service.ArxivService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
@@ -14,8 +15,7 @@ class ArxivController(val arxivService: ArxivService) {
     }
 
     @GetMapping("/search/")
-    fun search(@RequestParam(value = "q", required = true) query: String): String {
-        val searchForResourceName = arxivService.searchForResourceName(query)
-        return searchForResourceName.toString()
+    fun search(@RequestParam(value = "q", required = true) query: String): List<DocumentEntry> {
+        return arxivService.searchForResourceName(query)
     }
 }
