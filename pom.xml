@@ -8,10 +8,10 @@
 		<version>2.1.8.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>io.arxiv.gumichan01</groupId>
-	<artifactId>arxiv-spring-poc</artifactId>
+	<groupId>io.hal.gumichan01</groupId>
+	<artifactId>hal-spring-poc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>arxiv-spring-poc</name>
+	<name>hal-spring-poc</name>
 	<description>POC of arxiv client with Spring</description>
 
 	<properties>
