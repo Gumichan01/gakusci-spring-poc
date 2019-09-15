@@ -1,4 +1,4 @@
-# Arxiv Spring POC #
+# HAL Spring POC #
 
 **/!\ This project is a Prototype. DON'T USE IT IN PRODUCTION /!\\**
 
