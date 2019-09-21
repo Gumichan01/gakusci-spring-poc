@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.gakusci.gumichan01</groupId>
-    <artifactId>hal-spring-poc</artifactId>
+    <artifactId>gakusci-spring-poc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gakusci-spring-poc</name>
     <description>POC of Gakusci backend with Spring</description>

@@ -13,7 +13,7 @@ class Controller(val halService: IService) {
     @GetMapping("/")
     fun home(): String {
         return """<p>Hello Gakusci POC client</p>
-            <p>/!\This webapp is a Proof of Concept/!\</p>
+            <p>/!\ This webapp is a Proof of Concept /!\</p>
             <strong>DO NOT USE IT IN PRODUCTION</strong>"""
     }
 
