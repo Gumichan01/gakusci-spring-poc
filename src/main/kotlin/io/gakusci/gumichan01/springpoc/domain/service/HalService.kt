@@ -1,7 +1,7 @@
-package io.hal.gumichan01.springpoc.domain.service
+package io.gakusci.gumichan01.springpoc.domain.service
 
-import io.hal.gumichan01.springpoc.domain.model.DocumentEntry
-import io.hal.gumichan01.springpoc.restapi.HalRestTemplate
+import io.gakusci.gumichan01.springpoc.domain.model.DocumentEntry
+import io.gakusci.gumichan01.springpoc.restapi.HalRestTemplate
 import org.springframework.stereotype.Service
 
 @Service

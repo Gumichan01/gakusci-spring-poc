@@ -1,7 +1,7 @@
-package io.hal.gumichan01.springpoc.controller
+package io.gakusci.gumichan01.springpoc.controller
 
-import io.hal.gumichan01.springpoc.domain.model.DocumentEntry
-import io.hal.gumichan01.springpoc.domain.service.HalService
+import io.gakusci.gumichan01.springpoc.domain.model.DocumentEntry
+import io.gakusci.gumichan01.springpoc.domain.service.HalService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController

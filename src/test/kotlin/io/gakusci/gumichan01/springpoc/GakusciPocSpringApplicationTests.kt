@@ -1,4 +1,4 @@
-package io.hal.gumichan01.springpoc
+package io.gakusci.gumichan01.springpoc
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -9,8 +9,8 @@ import org.springframework.test.context.junit4.SpringRunner
 @SpringBootTest
 class GakusciPocSpringApplicationTests {
 
-	@Test
-	fun contextLoads() {
-	}
+    @Test
+    fun contextLoads() {
+    }
 
 }

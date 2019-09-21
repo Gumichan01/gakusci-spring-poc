@@ -1,4 +1,4 @@
-package io.hal.gumichan01.springpoc.restapi
+package io.gakusci.gumichan01.springpoc.restapi
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

@@ -1,4 +1,4 @@
-package io.hal.gumichan01.springpoc.restapi
+package io.gakusci.gumichan01.springpoc.restapi
 
 import org.springframework.stereotype.Component
 import org.springframework.web.client.RestTemplate
