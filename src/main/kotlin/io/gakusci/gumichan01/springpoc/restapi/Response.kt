@@ -12,8 +12,6 @@ data class HalResultEntry(val docid: Int, @JsonProperty("label_s") val label: St
                           @JsonProperty("uri_s") val uri: String)
 
 // Arxiv response data
-
-// TODO define classes
 data class Author(val name: String) {
     override fun toString() = name
 }

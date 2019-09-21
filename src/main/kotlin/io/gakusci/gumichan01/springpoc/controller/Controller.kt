@@ -20,6 +20,11 @@ class Controller(val halService: HalService, val arxivService: ArxivService) {
 
     @GetMapping("/search/")
     fun search(@RequestParam(value = "q", required = true) query: String): List<DocumentEntry> {
+        // TODO Create a simple Service Handler that handles the two services
+        // TODO -> IService is important
+        // TODO This service can launch any number of services in concurrently / or even in parrallel
+        // TODO asynchronously
+
         val arxivResult = arxivService.searchForResourceName(query)
         val halResult = halService.searchForResourceName(query)
         return listOf(arxivResult, halResult).flatten()
