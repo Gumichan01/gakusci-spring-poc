@@ -2,12 +2,13 @@ package io.gakusci.gumichan01.springpoc.controller
 
 import io.gakusci.gumichan01.springpoc.domain.model.DocumentEntry
 import io.gakusci.gumichan01.springpoc.domain.service.HalService
+import io.gakusci.gumichan01.springpoc.domain.service.IService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class Controller(val halService: HalService) {
+class Controller(val halService: IService) {
 
     @GetMapping("/")
     fun home(): String {
