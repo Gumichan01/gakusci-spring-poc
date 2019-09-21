@@ -11,8 +11,8 @@
 	<groupId>io.hal.gumichan01</groupId>
 	<artifactId>hal-spring-poc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hal-spring-poc</name>
-	<description>POC of arxiv client with Spring</description>
+	<name>gakusci-spring-poc</name>
+	<description>POC of Gakusci backend with Spring</description>
 
 	<properties>
 		<java.version>1.8</java.version>

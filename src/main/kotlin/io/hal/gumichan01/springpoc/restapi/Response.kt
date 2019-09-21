@@ -2,8 +2,8 @@ package io.hal.gumichan01.springpoc.restapi
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
-data class ArxivResponse(val response: ArxivResponseBody)
-data class ArxivResponseBody(val numFound: Int, val start: Int, val docs: List<ArxivResultEntry>?)
+data class HalResponse(val response: HalResponseBody)
+data class HalResponseBody(val numFound: Int, val start: Int, val docs: List<HalResultEntry>?)
 
-data class ArxivResultEntry(val docid: Int, @JsonProperty("label_s") val label: String,
-                            @JsonProperty("uri_s") val uri: String)
+data class HalResultEntry(val docid: Int, @JsonProperty("label_s") val label: String,
+                          @JsonProperty("uri_s") val uri: String)

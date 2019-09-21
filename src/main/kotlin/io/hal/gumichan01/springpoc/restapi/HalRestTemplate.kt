@@ -7,12 +7,12 @@ import org.springframework.web.client.getForObject
 @Component
 class HalRestTemplate {
 
-    private val arxivUrl = "https://api.archives-ouvertes.fr/search/?q=%s&wt=json"
+    private val halUrl = "https://api.archives-ouvertes.fr/search/?q=%s&wt=json"
     private val restTemplate: RestTemplate = RestTemplate()
 
-    fun search(query: String): List<ArxivResultEntry> {
-        val url = arxivUrl.format(query)
-        val arxivResponse: ArxivResponse? = restTemplate.getForObject(url)
-        return arxivResponse?.response?.docs ?: listOf()
+    fun search(query: String): List<HalResultEntry> {
+        val url = halUrl.format(query)
+        val halResponse: HalResponse? = restTemplate.getForObject(url)
+        return halResponse?.response?.docs ?: listOf()
     }
 }
