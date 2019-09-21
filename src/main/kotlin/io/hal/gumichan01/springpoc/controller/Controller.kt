@@ -11,7 +11,9 @@ class Controller(val service: Service) {
 
     @GetMapping("/")
     fun home(): String {
-        return "Hello Arxiv client\n"
+        return """<p>Hello Gakusci POC client</p>
+            <p>/!\This webapp is a Proof of Concept/!\</p>
+            <strong>DO NOT USE IT IN PRODUCTION</strong>"""
     }
 
     @GetMapping("/search/")
