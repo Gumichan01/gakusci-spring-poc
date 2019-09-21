@@ -1,6 +1,7 @@
 package io.gakusci.gumichan01.springpoc.controller
 
 import io.gakusci.gumichan01.springpoc.domain.model.DocumentEntry
+import io.gakusci.gumichan01.springpoc.domain.service.ArxivService
 import io.gakusci.gumichan01.springpoc.domain.service.HalService
 import io.gakusci.gumichan01.springpoc.domain.service.IService
 import org.springframework.web.bind.annotation.GetMapping
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class Controller(val halService: IService) {
+class Controller(val halService: HalService, val arxivService: ArxivService) {
 
     @GetMapping("/")
     fun home(): String {
@@ -19,6 +20,7 @@ class Controller(val halService: IService) {
 
     @GetMapping("/search/")
     fun search(@RequestParam(value = "q", required = true) query: String): List<DocumentEntry> {
+        arxivService.searchForResourceName(query)
         return halService.searchForResourceName(query)
     }
 }
