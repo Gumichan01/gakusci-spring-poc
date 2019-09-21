@@ -12,3 +12,4 @@ data class HalResultEntry(val docid: Int, @JsonProperty("label_s") val label: St
 // Arxiv response data
 
 // TODO define classes
+data class ArxivResultEntry(val label: String, val uri: String)

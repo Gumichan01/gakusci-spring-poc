@@ -20,7 +20,7 @@ class Controller(val halService: HalService, val arxivService: ArxivService) {
 
     @GetMapping("/search/")
     fun search(@RequestParam(value = "q", required = true) query: String): List<DocumentEntry> {
-        arxivService.searchForResourceName(query)
-        return halService.searchForResourceName(query)
+        return arxivService.searchForResourceName(query)
+        // return halService.searchForResourceName(query)
     }
 }

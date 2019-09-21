@@ -4,10 +4,8 @@ import io.gakusci.gumichan01.springpoc.domain.model.DocumentEntry
 import org.springframework.stereotype.Service
 
 @Service
-class ArxivService(val arxivRestTemplate: ArxivRestTemplate): IService {
+class ArxivService(val arxivRestTemplate: ArxivRestTemplate) : IService {
     override fun searchForResourceName(query: String): List<DocumentEntry> {
-        val result = arxivRestTemplate.search(query)
-        println(result)
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return arxivRestTemplate.search(query).map { e -> DocumentEntry(e.label, e.uri) }
     }
 }
