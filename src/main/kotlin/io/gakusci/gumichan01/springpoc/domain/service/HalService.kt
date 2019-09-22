@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 @Service
 class HalService(val halRestTemplate: HalRestTemplate) : IService {
 
-    override fun searchForResourceName(query: String): List<DocumentEntry> {
+    override suspend fun searchForResourceName(query: String): List<DocumentEntry> {
         return halRestTemplate.search(query).map { e -> DocumentEntry(e.label, e.uri) }
     }
 }

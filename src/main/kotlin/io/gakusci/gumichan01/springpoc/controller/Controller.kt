@@ -1,16 +1,13 @@
 package io.gakusci.gumichan01.springpoc.controller
 
 import io.gakusci.gumichan01.springpoc.domain.model.DocumentEntry
-import io.gakusci.gumichan01.springpoc.domain.service.ArxivService
-import io.gakusci.gumichan01.springpoc.domain.service.HalService
-import io.gakusci.gumichan01.springpoc.domain.service.IService
 import io.gakusci.gumichan01.springpoc.domain.service.SearchAggregator
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class Controller(val searchService: SearchAggregator) {
+class Controller(val searchAggregator: SearchAggregator) {
 
     @GetMapping("/")
     fun home(): String {
@@ -25,6 +22,6 @@ class Controller(val searchService: SearchAggregator) {
         // TODO -> IService is important
         // TODO This service can launch any number of services in concurrently / or even in parrallel
         // TODO asynchronously
-        return searchService.search(query)
+        return searchAggregator.search(query)
     }
 }

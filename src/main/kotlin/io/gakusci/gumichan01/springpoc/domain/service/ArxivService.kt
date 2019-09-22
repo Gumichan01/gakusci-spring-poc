@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class ArxivService(val arxivRestTemplate: ArxivRestTemplate) : IService {
-    override fun searchForResourceName(query: String): List<DocumentEntry> {
+    override suspend fun searchForResourceName(query: String): List<DocumentEntry> {
         return arxivRestTemplate.search(query).map { e -> DocumentEntry(e.label(), e.link) }
     }
 }
