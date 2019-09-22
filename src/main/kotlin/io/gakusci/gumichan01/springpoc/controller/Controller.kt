@@ -4,12 +4,13 @@ import io.gakusci.gumichan01.springpoc.domain.model.DocumentEntry
 import io.gakusci.gumichan01.springpoc.domain.service.ArxivService
 import io.gakusci.gumichan01.springpoc.domain.service.HalService
 import io.gakusci.gumichan01.springpoc.domain.service.IService
+import io.gakusci.gumichan01.springpoc.domain.service.SearchAggregator
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class Controller(val halService: HalService, val arxivService: ArxivService) {
+class Controller(val searchService: SearchAggregator) {
 
     @GetMapping("/")
     fun home(): String {
@@ -24,9 +25,6 @@ class Controller(val halService: HalService, val arxivService: ArxivService) {
         // TODO -> IService is important
         // TODO This service can launch any number of services in concurrently / or even in parrallel
         // TODO asynchronously
-
-        val arxivResult = arxivService.searchForResourceName(query)
-        val halResult = halService.searchForResourceName(query)
-        return listOf(arxivResult, halResult).flatten()
+        return searchService.search(query)
     }
 }
