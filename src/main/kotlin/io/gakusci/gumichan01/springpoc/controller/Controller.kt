@@ -9,13 +9,6 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class Controller(val searchAggregator: SearchAggregator) {
 
-    @GetMapping("/")
-    fun home(): String {
-        return """<p>Hello Gakusci POC client</p>
-            <p>/!\ This webapp is a Proof of Concept /!\</p>
-            <strong>DO NOT USE IT IN PRODUCTION</strong>"""
-    }
-
     @GetMapping("/search/")
     fun search(@RequestParam(value = "q", required = true) query: String): List<DocumentEntry> {
         // TODO Create a simple Service Handler that handles the two services
