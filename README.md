@@ -1,4 +1,4 @@
-# HAL Spring POC #
+# Gkusci Spring POC #
 
 **/!\ This project is a Prototype. DON'T USE IT IN PRODUCTION /!\\**
 
@@ -7,8 +7,10 @@
 This little project is a proof of concept that demonstrate the possibility to create a webapp that interacts with an external web-service
 by using Spring (Spring Boot) properly.
 
-It uses the [HAL archives ouvertes](https://hal.archives-ouvertes.fr) API.  
-API page (in french): https://api.archives-ouvertes.fr/docs/search
+It uses the [HAL archives ouvertes](https://hal.archives-ouvertes.fr) API and [arXiv](https://arxiv.org/).  
+
+- HAL API page (in french): https://api.archives-ouvertes.fr/docs/search
+- arXiv API page: https://arxiv.org/help/api
 
 ## Licence ##
 
