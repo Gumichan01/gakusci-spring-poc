@@ -23,7 +23,6 @@ function GakuForm() {
   );
 }
 
-
 /*
 
 <form action="/search">
@@ -32,6 +31,5 @@ function GakuForm() {
 </form>
 
 */
-
 const domContainer = document.querySelector('#search_form');
 ReactDOM.render(React.createElement(GakuForm), domContainer);
