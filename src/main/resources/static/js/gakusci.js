@@ -23,8 +23,15 @@ function GakuForm() {
   );
 }
 
-// <input id="query" type="text" name="q"/>
-// <input id="search" type="submit"/>
+
+/*
+
+<form action="/search">
+  <input id="query" type="text" name="q"/>
+  <input id="search" type="submit"/>
+</form>
+
+*/
 
 const domContainer = document.querySelector('#search_form');
 ReactDOM.render(React.createElement(GakuForm), domContainer);
