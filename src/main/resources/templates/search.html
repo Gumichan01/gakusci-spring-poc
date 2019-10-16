@@ -9,7 +9,7 @@
     <h1>Gakusci POC results</h1>
     <div id="search_form"></div>
 
-    <div th:each="entry : ${entries}">
+    <div class="result_entry" th:each="entry : ${entries}">
         <p th:text="${entry.label}"></p>
         <a th:href="${entry.url}" th:text="${entry.url}"></a>
     </div>
@@ -19,6 +19,7 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <!-- Custom script that contains components -->
     <script src="js/gakusci.js"></script>
+    <script src="js/search.js"></script>
 </div>
 </body>
 </html>
