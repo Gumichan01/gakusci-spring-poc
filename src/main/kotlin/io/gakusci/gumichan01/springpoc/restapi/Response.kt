@@ -20,4 +20,4 @@ data class Author(val name: String) {
 // But well, It's a POC, it is not designed to be in production
 data class ArxivResultEntry(val authors: List<Author>, val title: String, val publishedDate: Date, val link: String)
 
-fun ArxivResultEntry.label(): String = "$authors. $title. publishedDate"
+fun ArxivResultEntry.label(): String = "$authors. $title. $publishedDate"
