@@ -1,21 +1,25 @@
 'use strict';
 
-const query = React.createElement(
-  'input',
-  {id: "query", type: "text", name: "q"}
-);
+function GakuQuery() {
+  return React.createElement(
+    'input',
+    {id: "query", type: "text", name: "q"}
+  );
+}
 
-const searchSubmit = React.createElement(
-  'input',
-  {id: "search", type: "submit"}
-);
+function GakuSearchSubmit() {
+  return React.createElement(
+    'input',
+    {id: "search", type: "submit"}
+  );
+}
 
 function GakuForm() {
   return React.createElement(
     'form',
     {action: "/search"},
-    query,
-    searchSubmit
+    GakuQuery(),
+    GakuSearchSubmit()
   );
 }
 
